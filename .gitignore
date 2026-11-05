@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ortam değişkenleri (gizli bilgiler)
+.env
+.env.*
+!.env.example
