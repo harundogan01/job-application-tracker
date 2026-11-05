@@ -1,6 +1,10 @@
-import { useParams } from 'react-router'
+import { useParams, Link } from 'react-router'
 
 export default function DetailsPage() {
   const { id } = useParams()
-  return <h1>Başvuru #{ id }</h1>
+  return (
+    <Link to={'/applications/' + id + '/edit' }>
+      Başvuruyu Düzenle #{ id }
+    </Link>
+  )
 }
