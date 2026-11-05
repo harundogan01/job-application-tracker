@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+/*
+ * Tailwind v4'te dark mode varsayılan olarak işletim sistemi ayarını izler.
+ * Biz temayı kullanıcının seçebilmesini istiyoruz, bu yüzden <html> etiketine
+ * eklenen "dark" class'ına bağlıyoruz (bkz. src/components/ThemeSync.tsx).
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    @apply bg-gray-50 text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100;
+  }
+
+  /* Tailwind v4'te border rengi varsayılan olarak currentColor; daha yumuşak bir ton veriyoruz */
+  *,
+  ::before,
+  ::after {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+}
