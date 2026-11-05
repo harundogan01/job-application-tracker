@@ -10,14 +10,12 @@ export default function AppLayout() {
             isActive ? 'font-semibold text-blue-600' : 'text-gray-600'
           }
         >
-          Texts
+          {<h1>{ 'Selamlar' }</h1>}
         </NavLink>
-        {'Hi, how are you?'}
-
-        <main className="flex-1 p-6">
-          <Outlet />
-        </main>
       </nav>
+      <main className="flex-1 p-6">
+        <Outlet />
+      </main>
     </div>
   )
 }

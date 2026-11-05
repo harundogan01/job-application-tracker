@@ -1,14 +1,14 @@
 import { createBrowserRouter } from 'react-router'
 import AppLayout from '@/components/layout/AppLayout'
 import AuthLayout from '@/components/layout/AuthLayout'
-import DetailsPage from '@/features/applications/pages/Detail'
-import EditPage from '@/features/applications/pages/Edit'
-import ListPage from '@/features/applications/pages/List'
-import NewPage from '@/features/applications/pages/New'
-import LoginPage from '@/features/auth/pages/Login'
-import RegisterPage from '@/features/auth/pages/Register'
-import DashboardPage from '@/features/dashboard/pages/Dashboard'
-import NotFoundPage from '@/pages/NotFound'
+import DetailsPage from '@/features/applications/pages/DetailsPage'
+import EditPage from '@/features/applications/pages/EditPage'
+import ListPage from '@/features/applications/pages/ListPage'
+import NewPage from '@/features/applications/pages/NewPage'
+import LoginPage from '@/features/auth/pages/LoginPage'
+import RegisterPage from '@/features/auth/pages/RegisterPage'
+import DashboardPage from '@/features/dashboard/pages/DashboardPage'
+import NotFoundPage from '@/pages/NotFoundPage'
 
 export const router = createBrowserRouter([
   {
