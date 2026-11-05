@@ -21,4 +21,11 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // Test dosyaları ve yardımcıları bileşen dışında şeyler de dışa aktarabilir
+    files: ['**/*.test.{ts,tsx}', 'src/test/**', 'e2e/**'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ])

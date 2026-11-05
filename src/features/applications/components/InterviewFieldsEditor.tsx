@@ -42,20 +42,19 @@ export function InterviewFieldsEditor({ control, register, errors }: Props) {
         return (
           // key olarak index değil, useFieldArray'in ürettiği sabit anahtar kullanılmalı.
           // Index kullanılırsa ortadan bir satır silindiğinde alanlar karışır.
-          <fieldset key={field.key} className="rounded-xl border p-4">
-            <div className="mb-3 flex items-center justify-between">
-              <legend className="text-sm font-semibold">{index + 1}. görüşme</legend>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => remove(index)}
-                className="text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-500/10"
-              >
-                <Trash2 className="size-4" aria-hidden /> Kaldır
-              </Button>
-            </div>
+          <fieldset key={field.key} className="relative rounded-xl border p-4">
+            {/* legend, fieldset'in ilk çocuğu olmalı; yoksa ekran okuyucular grubun adını okuyamaz */}
+            <legend className="float-left mb-3 text-sm font-semibold">{index + 1}. görüşme</legend>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => remove(index)}
+              className="absolute top-3 right-3 text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-500/10"
+            >
+              <Trash2 className="size-4" aria-hidden /> Kaldır
+            </Button>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="clear-both grid gap-4 sm:grid-cols-2">
               <FormField label="Görüşme türü" error={fieldErrors?.type?.message}>
                 {(a11y) => (
                   <Select {...a11y} options={INTERVIEW_TYPE_OPTIONS} {...register(`interviews.${index}.type`)} />
