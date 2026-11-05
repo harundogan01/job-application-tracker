@@ -35,7 +35,7 @@ export function createSampleApplications(): ApplicationInput[] {
     {
       company: 'Kuzey Fintek',
       position: 'Frontend Engineer',
-      location: 'Uzaktan',
+      location: 'İstanbul',
       workType: 'remote',
       status: 'applied',
       appliedAt: daysFromToday(-4),
