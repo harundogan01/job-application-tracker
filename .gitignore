@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ortam değişkenleri (gizli bilgiler)
+.env
+.env.*
+!.env.example
+
+# Playwright çıktıları
+test-results
+playwright-report
+blob-report
+playwright/.cache
