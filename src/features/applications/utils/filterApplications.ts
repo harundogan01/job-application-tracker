@@ -1,4 +1,5 @@
 import type { Application, ApplicationStatus } from '@/features/applications/types'
+import { normalize } from '@/lib/normalize'
 
 export const SORT_OPTIONS = [
   { value: 'updated', label: 'Son güncellenen' },
@@ -13,8 +14,6 @@ export type ApplicationFilters = {
   status: ApplicationStatus | ''
   sort: SortOption
 }
-
-const normalize = (text: string) => text.toLocaleLowerCase('tr').trim()
 
 /**
  * Saf (pure) fonksiyon: aynı girdiye her zaman aynı çıktıyı verir, dışarıdaki
