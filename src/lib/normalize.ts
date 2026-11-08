@@ -1,0 +1,1 @@
+export const normalize = (text: string) => text.toLocaleLowerCase('tr').trim()

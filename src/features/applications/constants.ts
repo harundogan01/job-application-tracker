@@ -2,6 +2,8 @@ import type { ApplicationStatus, Currency, InterviewType, WorkType } from '@/fea
 
 type Option<T extends string> = { value: T; label: string }
 
+export const CLOSED_STATUSES: ApplicationStatus[] = ['rejected', 'withdrawn']
+
 export const STATUS_META: Record<
   ApplicationStatus,
   { label: string; badgeClass: string; dotClass: string }
